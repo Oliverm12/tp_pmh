@@ -14,7 +14,7 @@ class project_1 extends StatelessWidget {
     return ChangeNotifierProvider<Favorites>(
       create: (context) => Favorites(),
       child: MaterialApp(
-        title: 'Testing Sample',
+        title: 'Testing Sample1',
         theme: ThemeData(
           primarySwatch: Colors.blue,
           visualDensity: VisualDensity.adaptivePlatformDensity,
