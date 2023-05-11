@@ -1,0 +1,80 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(new MyApp());
+}
+class MyApp extends StatelessWidget {
+
+  @override
+  Widget build(BuildContext context) {
+    return new MaterialApp(
+      title: 'Generated App',
+      theme: new ThemeData(
+        primarySwatch: Colors.blue,
+        primaryColor: const Color(0xFF2196f3),
+        accentColor: const Color(0xFF2196f3),
+        canvasColor: const Color(0xFFfafafa),
+      ),
+      home: new MyHomePage(),
+    );
+  }
+}
+
+class MyHomePage extends StatefulWidget {
+  MyHomePage({Key key}) : super(key: key);
+  @override
+  _MyHomePageState createState() => new _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+    @override
+    Widget build(BuildContext context) {
+      return new Scaffold(
+        appBar: new AppBar(
+          title: new Text('Multi Screen'),
+          ),
+        body:
+          new Container(
+            child:
+              new RaisedButton(key:null, onPressed:buttonPressed,
+                color: const Color(0xFFe0e0e0),
+                child:
+                  new Text(
+                  "BUTTON 2",
+                    style: new TextStyle(fontSize:12.0,
+                    color: const Color(0xFF000000),
+                    fontWeight: FontWeight.w200,
+                    fontFamily: "Roboto"),
+                  )
+                ),
+    
+            padding: const EdgeInsets.all(0.0),
+            alignment: Alignment.center,
+            width: 1.7976931348623157e+308,
+            height: 1.7976931348623157e+308,
+          ),
+    
+        bottomNavigationBar: new BottomNavigationBar(
+          items: [
+            new BottomNavigationBarItem(
+              icon: const Icon(Icons.local_grocery_store),
+              title: new Text('Cart'),
+            ),
+    
+            new BottomNavigationBarItem(
+              icon: const Icon(Icons.mail),
+              title: new Text('Inbox'),
+            ),
+    
+            new BottomNavigationBarItem(
+              icon: const Icon(Icons.person),
+              title: new Text('Profil'),
+            )
+          ]
+    
+        ),
+      );
+    }
+    void buttonPressed(){}
+    
+}
